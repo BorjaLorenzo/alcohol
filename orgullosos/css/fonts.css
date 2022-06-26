@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('HelveticaNeue.woff2') format('woff2'),
+        url('HelveticaNeue.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    src: url('HelveticaNeue-Light.woff2') format('woff2'),
+        url('HelveticaNeue-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Helvetica Neue Bold';
+    src: url('HelveticaNeue-Bold.woff2') format('woff2'),
+        url('HelveticaNeue-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-ExtraBold.woff2') format('woff2'),
+        url('Gilroy-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+body{
+	font-family: 'Helvetica Neue', serif;
+    font-family: 'Helvetica Neue Light', serif;
+}
+b,strong{
+    font-family: 'Helvetica Neue';
+}
+
+header *{
+    font-family: 'Helvetica Neue', serif;
+}
+
+.titulo1,.handwrite, .linkfx2 span{
+	font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: bolder;
+	/*font-family: 'Helvetica Neue Bold';*/
+}
+
+.titulo2,h3, .footer_container h4{
+    font-family: 'Gilroy', serif;
+    /*font-family: 'Helvetica Neue Bold';*/
+}
+.link{
+    font-family: 'Helvetica Neue Bold';
+}
+.preloader_text{
+    font-family: 'Gilroy', serif;
+}
+.pag_n{
+    font-family: 'Gilroy', serif;   
+}
+.gilroy{
+    font-family: 'Gilroy', serif;
+}
+.helveticaneue{
+    font-family: 'Helvetica Neue', serif;
+}
+.helveticaneuelight{
+    font-family: 'Helvetica Neue Light', serif;
+}
+.helveticaneuebold{
+    font-family: 'Helvetica Neue Bold', serif;
+}
+.playfair{
+    font-family: 'Playfair Display', serif;
+}
+.flex-container .material label{
+    /*font-family: 'Gilroy', serif !important;*/
+    font-family: 'Helvetica Neue Bold', serif;
+}

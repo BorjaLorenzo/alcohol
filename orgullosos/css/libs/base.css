@@ -1,0 +1,232 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+	color: #fff;
+	background-color: #fff;
+}
+
+/* Page Loader */
+.js .loading::before {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	opacity: 1;
+	height: 100%;
+	background: #fff;
+	transition: all 0.7s ease-in;
+}
+
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 50%;
+	opacity: 1;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	pointer-events: none;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: #000;
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+	
+}
+
+
+@keyframes loaderAnim {
+	
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+a {
+	text-decoration: none;
+	color: #b07656;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #000;
+	outline: none;
+}
+
+[data-scroll] {
+	will-change: transform;
+}
+div.scrolling{
+		will-change: transform;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	padding: 12rem 0;
+}
+
+.item {
+	margin: 10vh auto;
+	max-width: 100%;
+	position: relative;
+	will-change: transform;
+}
+
+
+
+.item:nth-child(even)::before {
+	right: 0;
+}
+
+.item__img-wrap {
+	--aspect-ratio: 1/1.5;
+	overflow: hidden;
+	width: 500px;
+	margin: 0 auto;
+	padding-bottom: calc(100% / (var(--aspect-ratio)));
+	max-width: calc(100% - 2rem);
+	will-change: transform;
+}
+/*
+.item:first-child .item__img-wrap {
+	--aspect-ratio: 8/10;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/1.jpg);
+}
+
+.item:nth-child(2) .item__img-wrap {
+	width: 1000px;
+	--aspect-ratio: 120/76;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/2.jpg);
+}
+
+.item:nth-child(3) .item__img-wrap {
+	--aspect-ratio: 60/75;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/3.jpg);
+}
+
+.item:nth-child(4) .item__img-wrap {
+	width: 800px;
+	--aspect-ratio: 900/505;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/4.jpg);
+}
+
+.item:nth-child(5) .item__img-wrap {
+	--aspect-ratio: 6/8;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/5.jpg);
+}
+
+.item:nth-child(6) .item__img-wrap {
+	width: calc(100vw - 2rem);
+	--aspect-ratio: 1500/844;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/6.jpg);
+}
+
+.item:nth-child(7) .item__img-wrap {
+width: 900px;
+	--aspect-ratio: 1000/749;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/7.jpg);
+}
+
+.item:nth-child(8) .item__img-wrap {
+	width: 900px;
+	--aspect-ratio: 1000/562;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/8.jpg);
+}
+
+.item:nth-child(9) .item__img-wrap {
+	--aspect-ratio: 60/75;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/9.jpg);
+}*/
+
+.item__img {
+	--overflow: 40px;
+	height: calc(100% + (2 * var(--overflow)));
+	top: calc( -1 * var(--overflow));
+	width: 100%;
+	position: absolute;
+	background-image: var(--image);
+	background-size: cover;
+	background-position: 50% 0%;
+	will-change: transform;
+}
+
+.item__img--t1 {
+	--overflow: 60px;
+}
+
+.item__img--t2 {
+	--overflow: 80px;
+}
+
+.item__img--t3 {
+	--overflow: 120px;
+}
+
+.item__caption {
+	padding: 2rem 1rem;
+}
+
+.item__caption-title {
+	font-family: paralucent, sans-serif;
+	font-weight: 400;
+	font-size: 3rem;
+	margin: 0;
+}
+
+.item__caption-copy {
+	margin: 0;
+}
+.fijo{
+	position: fixed;
+	z-index:9;
+	top:10%;
+	width:100%;
+	text-align: center;
+	font-size:100px;
+	color:#000;
+}
+.special-item{
+	margin-left: 117vh;
+    top: -99vh;
+}
+.item.special-item .item__img-wrap {
+    width: 400px;
+    --aspect-ratio: 1000/562;
+    --image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/8.jpg);
+}
+.os-animation{
+	opacity: 0;
+	transition: 0.2s opacity ease-in;
+}
+
+.os-animation.animated{
+	opacity: 1;
+	transition: 0.2s opacity ease-in;
+}
+/*.container,
+.staggered-animation-container {
+  position: relative;
+  margin-left: auto;
+  max-width: 75%;
+  margin-right: auto;
+}*/
+
+.float-items{
+    color:#fff;
+}
+
